@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '@/assets/logo.png'
+import logo from '@/assets/images/logo.png'
 
 export function Header() {
     return (
@@ -12,12 +12,12 @@ export function Header() {
 
                     <li className="animate-underline">Contact</li>
                     <li className="animate-underline">Support</li>
-                    <li className="animate-underline">About Us</li>
+                    <li className="animate-underline">About us</li>
                     <li className="animate-underline">Wallet</li>
 
                     <li>
                         <button className="btn btn-outline btn-primary">
-                            Download
+                            Download App
                         </button>
                     </li>
                 </ul>
