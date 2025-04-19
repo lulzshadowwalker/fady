@@ -343,6 +343,11 @@
     .btn:active {
         transform: scale(0.97);
     }
+
+    .card {
+      @apply rounded-[5px] bg-base-500 max-w-fit py-5 px-16;
+      box-shadow: 0px 4px 8.5px 0px rgba(0, 0, 0, 0.25);
+    }
 }
 
 @layer utilities {
