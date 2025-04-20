@@ -32,18 +32,18 @@ export function Footer() {
           </button>
         </div>
 
-        <ul className="space-y-5">
-          <li>About us</li>
-          <li>Fady Passengers</li>
-          <li>Fady Drivers</li>
-          <li>Services</li>
-          <li>Wallet</li>
+        <ul className="flex items-start flex-col gap-5">
+          <li className="animate-underline animate-underline-secondary-content">About us</li>
+          <li className="animate-underline animate-underline-secondary-content">Fady Passengers</li>
+          <li className="animate-underline animate-underline-secondary-content">Fady Drivers</li>
+          <li className="animate-underline animate-underline-secondary-content">Services</li>
+          <li className="animate-underline animate-underline-secondary-content">Wallet</li>
         </ul>
 
-        <ul className="space-y-5">
-          <li>FAQ</li>
-          <li>Help</li>
-          <li>Terms and Conditions</li>
+        <ul className="flex flex-col gap-5 items-start">
+          <li className="animate-underline animate-underline-secondary-content">FAQ</li>
+          <li className="animate-underline animate-underline-secondary-content">Help</li>
+          <li className="animate-underline animate-underline-secondary-content">Terms and Conditions</li>
         </ul>
 
         <ul className="space-y-4">

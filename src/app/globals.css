@@ -27,6 +27,8 @@
   --color-primary-content-900: oklch(65.004% 0 none);
   --color-primary-content-950: oklch(60.325% 0 none);
 
+  /*  NOTE: --color-secondary is currently using the 600 shade instead of the 500 shade.*/
+  /*  Keep in mind that the color from the brand is 500 not 600. */
   --color-secondary: oklch(21.779% 0 none);
   --color-secondary-50: oklch(65.996% 0 none);
   --color-secondary-100: oklch(62.675% 0 none);
@@ -361,8 +363,8 @@
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
+    height: 3px;
+    bottom: -4px;
     left: 0;
     background-color: var(--color-base-content);
     border-radius: 12px;
@@ -373,5 +375,9 @@
   .animate-underline:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  .animate-underline:has(.animate-underline-secondary-content) ::after {
+    background-color: var(--color-secondary-content);
   }
 }
