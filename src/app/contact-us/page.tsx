@@ -8,7 +8,7 @@ export default function ContactUs() {
     <main className="min-h-screen container mx-auto relative pt-12" >
       <Image src={background} alt="" fill className="-z-50" />
 
-      <h1 className="uppercase font-semibold text-center max-w-[740px] mx-auto leading-[90px] text-[5.3rem] mb-8">We're here to help!</h1>
+      <h1 className="uppercase font-semibold text-center max-w-[740px] mx-auto leading-[90px] text-[5.3rem] mb-8">We&lsquo;re here to help!</h1>
 
       <section className="flex gap-4 mb-32">
         <div className="card grow basis-0 shadow-none py-11 max-w-full flex flex-col items-center justify-center gap-8">
