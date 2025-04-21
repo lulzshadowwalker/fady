@@ -1,5 +1,6 @@
 import { Hero } from "./components/hero";
 import { InfoCard } from "./components/info-card";
+import { Passengers } from "./components/passengers";
 import { Stats } from "./components/stats";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
 
       <div className="bg-secondary text-secondary-content">
         <Stats />
+        <Passengers />
       </div>
     </main>
   );

@@ -381,3 +381,22 @@
     background-color: var(--color-secondary-content);
   }
 }
+
+.slick-dots {
+  bottom: -40px !important;
+}
+
+.slick-dots li button:before {
+  color: var(--color-secondary-content) !important;
+  transition: all 500ms ease-out;
+  font-size: 0.8rem;
+}
+
+.slick-dots li button:before {
+  color: var(--color-secondary-content) !important;
+  transition: all 500ms ease-out;
+  font-size: 0.8rem !important;
+}
+.slick-dots li.slick-active button:before {
+  font-size: 1.2rem !important;
+}

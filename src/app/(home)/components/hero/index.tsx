@@ -28,7 +28,7 @@ export function Hero() {
             </button>
           </div>
 
-          <div className="flex items-center gap-3 text-sm text-neutral-500 mt-4 leading-[10px]">
+          <div className="flex items-center gap-2 text-sm text-neutral-500 mt-4 leading-[10px]">
             <FontAwesomeIcon icon={faInfoCircle} size="sm" />
             how to download on iOS?
           </div>
