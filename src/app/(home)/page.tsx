@@ -3,6 +3,7 @@ import { InfoCard } from "./components/info-card";
 import { Passengers } from "./components/passengers";
 import { Drivers } from "./components/drivers";
 import { Stats } from "./components/stats";
+import { MoreWaysToRide } from "./components/more-ways-to-ride";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <Passengers />
         <Drivers />
       </div>
+
+      <MoreWaysToRide />
     </main>
   );
 }

@@ -7,7 +7,7 @@ import Slider from "react-slick";
 
 export function Drivers() {
   return (
-    <section className="container mx-auto my-25">
+    <section className="container mx-auto mt-25 pb-35">
       <h2 className="tracking-[5%] leading-22 font-bold text-center text-[5.31rem] uppercase"><span className="text-primary">Fady</span> Drivers</h2>
 
       <Slider infinite speed={500} slidesToShow={1} slidesToScroll={1} centerPadding="0" centerMode dots arrows={false} autoplay className="mt-17">
