@@ -1,6 +1,7 @@
 import { Hero } from "./components/hero";
 import { InfoCard } from "./components/info-card";
 import { Passengers } from "./components/passengers";
+import { Drivers } from "./components/drivers";
 import { Stats } from "./components/stats";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <div className="bg-secondary text-secondary-content">
         <Stats />
         <Passengers />
+        <Drivers />
       </div>
     </main>
   );
