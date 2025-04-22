@@ -1,6 +1,11 @@
 'use client'
 
+import { useStats } from "@/lib/context/stats-context"
+
 export default function Playground() {
+  const { stats } = useStats();
+  console.log(stats);
+
     const variants = [
         'primary',
         'secondary',
