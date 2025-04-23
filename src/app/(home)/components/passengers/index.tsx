@@ -1,5 +1,4 @@
 "use client";
-
 import { faAppStoreIos, faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

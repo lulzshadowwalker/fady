@@ -205,6 +205,12 @@
         border-color: var(--color-primary);
     }
 
+    .btn-primary-content {
+        background-color: var(--color-primary-content);
+        color: var(--color-primary);
+        border-color: var(--color-primary-content);
+    }
+
     .btn-secondary {
         background-color: var(--color-secondary);
         color: var(--color-secondary-content);
@@ -241,6 +247,12 @@
         border-color: var(--color-primary);
     }
 
+    .btn-outline.btn-primary-content {
+        background-color: transparent;
+        color: var(--color-primary-content);
+        border-color: var(--color-primary-content);
+    }
+
     .btn-outline.btn-secondary {
         background-color: transparent;
         color: var(--color-secondary);
@@ -274,6 +286,13 @@
     .btn-primary:hover {
         background-color: var(--color-primary);
         border-color: var(--color-primary);
+        box-shadow: 0 4px 14px rgba(195, 61, 61, 0.4);
+    }
+
+    .btn-primary-content:hover {
+        background-color: var(--color-primary-content);
+        border-color: var(--color-primary-content);
+        color: var(--color-primary);
         box-shadow: 0 4px 14px rgba(195, 61, 61, 0.4);
     }
 
@@ -421,15 +440,10 @@
     }
 
     .slick-dots li button:before {
+        margin-top: -1rem;
         color: var(--color-secondary-content) !important;
         transition: all 500ms ease-out;
         font-size: 0.8rem;
-    }
-
-    .slick-dots li button:before {
-        color: var(--color-secondary-content) !important;
-        transition: all 500ms ease-out;
-        font-size: 0.8rem !important;
     }
 
     .slick-dots li.slick-active button:before {

@@ -8,6 +8,7 @@ export default function Playground() {
 
     const variants = [
         'primary',
+        'primary-content',
         'secondary',
         'success',
         'info',
