@@ -404,7 +404,7 @@
   }
 
   .modal-action {
-    @apply mt-6 flex justify-end gap-3;
+    @apply mt-4 flex justify-end gap-3;
   }
 
   .modal-backdrop {
@@ -477,6 +477,19 @@
       transform: rotate(180deg);
       transition: all ease-out 0.3s;
     }
+  }
+
+  :root {
+    --plyr-range-fill-background: var(--color-primary);
+    --plyr-video-control-background-hover: var(--color-primary);
+  }
+
+  .plyr {
+    border-radius: 5px;
+  }
+
+  .plyr {
+    max-height: 40.3333dvh;
   }
 
   .slick-dots {

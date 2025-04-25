@@ -1,16 +1,13 @@
 import { tido } from '@/assets/fonts/tido'
 import { cn } from '@/lib/cn'
 import { faAppStoreIos } from '@fortawesome/free-brands-svg-icons'
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { InteractiveGrid } from '@/shared/interactive-grid'
 import { faGooglePlay } from '@fortawesome/free-brands-svg-icons/faGooglePlay'
+import { IosDownloadGuide } from '@/shared/ios-download-guide'
 
 export function Hero() {
     return (
         <section className="container mx-auto mt-12 flex gap-4 justify-between relative">
-            <InteractiveGrid />
-
             <div>
                 <h1
                     className={cn(
@@ -72,10 +69,7 @@ export function Hero() {
                     </button>
                 </div>
 
-                <div className="flex items-center gap-2 text-sm text-neutral-500 mt-4 leading-[10px]">
-                    <FontAwesomeIcon icon={faInfoCircle} size="sm" />
-                    how to download on iOS?
-                </div>
+                <IosDownloadGuide />
             </div>
 
             <div className="max-w-2xl bg-gray-400 animate-pulse w-full self-start aspect-square card"></div>

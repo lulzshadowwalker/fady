@@ -2,6 +2,8 @@
 
 import { Link, usePathname } from '@/i18n/navigation'
 import { InteractiveGrid } from '@/shared/interactive-grid'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
 
@@ -79,7 +81,9 @@ function Dialog1() {
       <dialog className="modal modal-center" ref={ref}>
         <div className="modal-box">
           <form method="dialog">
-            <button className="modal-close btn">✕</button>
+            <button className="modal-close btn">
+              <FontAwesomeIcon icon={faXmark} size="lg" />
+            </button>
           </form>
 
           <h3 className="text-lg font-bold">Hello!</h3>
