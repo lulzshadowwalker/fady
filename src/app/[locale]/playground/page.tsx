@@ -1,13 +1,15 @@
 'use client'
 
-import { useStats } from "@/lib/context/stats-context"
+import { Link, usePathname } from "@/i18n/navigation";
 import { InteractiveGrid } from "@/shared/interactive-grid";
+import { useLocale, useTranslations } from "next-intl";
 import React from 'react';
 
 
 export default function Playground() {
-  const { stats } = useStats();
-  console.log(stats);
+  const t = useTranslations("playground");
+  const pathname = usePathname();
+  const nextLocale = useLocale() === "en" ? "ar" : "en";
 
   const variants = [
     'primary',
@@ -21,7 +23,10 @@ export default function Playground() {
 
   return (
     <main className="min-h-screen p-8 bg-gray-200 space-y-8">
-      <h1 className="text-2xl font-bold mb-4">Button Playground</h1>
+      <h1 className="text-2xl font-bold mb-8">Localization</h1>
+      <Link href={pathname} locale={nextLocale} className="btn btn-primary">{t('hello')}</Link>
+
+      <h1 className="text-2xl font-bold mt-8 mb-4">Button Playground</h1>
 
       {variants.map((variant) => (
         <div key={variant}>
@@ -52,4 +57,3 @@ export default function Playground() {
     </main>
   )
 }
-
