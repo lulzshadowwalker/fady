@@ -195,7 +195,7 @@
         transition: all 0.25s ease-in-out;
         transform: translateZ(0);
         will-change: transform, box-shadow, background-color, color,
-        border-color;
+            border-color;
         cursor: pointer;
     }
 
