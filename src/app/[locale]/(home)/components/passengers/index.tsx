@@ -1,4 +1,5 @@
 'use client'
+
 import { IosDownloadGuide } from '@/shared/ios-download-guide'
 import { faAppStoreIos, faGooglePlay } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
