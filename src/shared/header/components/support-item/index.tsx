@@ -3,12 +3,14 @@
 import { motion } from "framer-motion"
 import { WhatsappDialog, WhatsappDialogRef } from "@/shared/whatsapp-dialog"
 import { useRef } from "react"
+import { cn } from "@/lib/cn"
 
 type Props = {
   variants?: any
+  className?: string
 }
 
-export function SupportItem({ variants }: Props) {
+export function SupportItem({ variants, className }: Props) {
   const ref = useRef<WhatsappDialogRef>(null);
 
   function open() {
@@ -16,7 +18,7 @@ export function SupportItem({ variants }: Props) {
   }
 
   return <>
-    <motion.button className="animate-underline cursor-pointer" variants={variants} onClick={open}>
+    <motion.button className={cn("cursor-pointer", className)} variants={variants} onClick={open}>
       Support
     </motion.button>
 

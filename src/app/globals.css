@@ -459,6 +459,12 @@
     padding-top: 6.2rem !important;
   }
 
+  @media screen and (max-width: 640px) {
+    header + * {
+      padding-top: 3.2rem !important;
+    }
+  }
+
   /* Chromium / Firefox */
   details summary {
     list-style: none;

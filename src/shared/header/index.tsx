@@ -82,7 +82,7 @@ export function Header() {
       animate={show || isOpen ? 'visible' : 'hidden'}
       variants={headerVariants}
     >
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image src={logo} alt="fady logo" width={118} />
@@ -108,7 +108,7 @@ export function Header() {
             Contact
           </MotionLink>
 
-          <SupportItem variants={itemVariants} />
+          <SupportItem variants={itemVariants} className="animate-underline" />
 
           <MotionLink href="/faq" className="animate-underline" variants={itemVariants}>
             FAQ
@@ -172,30 +172,27 @@ export function Header() {
                   </MotionLink>
                 </motion.li>
                 <motion.li variants={itemVariants}>
-                  <MotionLink href="/support" className="block text-lg" onClick={() => setIsOpen(false)}>
-                    Support
+                  <SupportItem variants={itemVariants} />
+                </motion.li>
+                <motion.li variants={itemVariants}>
+                  <MotionLink href="/faq" className="block text-lg" onClick={() => setIsOpen(false)}>
+                    FAQ
                   </MotionLink>
                 </motion.li>
                 <motion.li variants={itemVariants}>
-                  <MotionLink href="/about-us" className="block text-lg" onClick={() => setIsOpen(false)}>
-                    About us
-                  </MotionLink>
-                </motion.li>
-                <motion.li variants={itemVariants}>
-                  <MotionLink href="/wallet" className="block text-lg" onClick={() => setIsOpen(false)}>
+                  <MotionLink href="/wallet/prepaid-cards" className="block text-lg" onClick={() => setIsOpen(false)}>
                     Wallet
                   </MotionLink>
                 </motion.li>
+
                 <motion.li variants={itemVariants}>
-                  <button
+                  <Link
+                    href="/#passengers"
                     className="btn btn-outline btn-primary w-full"
-                    onClick={() => {
-                      setIsOpen(false)
-                      window.location.href = '/download-app'
-                    }}
+                    onClick={() => setIsOpen(false)}
                   >
                     Download App
-                  </button>
+                  </Link>
                 </motion.li>
               </motion.ul>
             </motion.nav>

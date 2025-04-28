@@ -1,8 +1,6 @@
-import Image from 'next/image'
 import background from '@/assets/images/more-ways-to-ride-background.png'
 import {
     faCar,
-    faCarSide,
     faGift,
     faIdCard,
     faInfoCircle,
@@ -33,7 +31,7 @@ export function MoreWaysToRide() {
             }}
         >
             <div className="container mx-auto z-10">
-                <h2 className="font-semibold text-[5.37rem] leading-22 max-md:text-5xl">
+                <h2 className="font-semibold text-[5.37rem] leading-22 max-md:text-5xl max-md:leading-11">
                     More ways to ride
                 </h2>
                 <ul className="space-y-14 mt-21">
