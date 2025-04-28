@@ -416,6 +416,10 @@
 }
 
 @layer utilities {
+  .rounded-box {
+    border-radius: 5px;
+  }
+
   .animate-underline {
     display: inline-block;
     position: relative;

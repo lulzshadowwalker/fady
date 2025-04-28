@@ -75,7 +75,7 @@ export default function Faq() {
                                         className="icon"
                                     />
                                 </summary>
-                                <div className="text-2xl font-medium leading-7 text-start text-secondary bg-secondary-content rounded-[5px] py-9 mt-6 mb-12 max-lg:px-4 max-lg:text-xl">
+                                <div className="text-2xl font-medium leading-7 text-start text-secondary bg-secondary-content rounded-box py-9 mt-6 mb-12 max-lg:px-4 max-lg:text-xl">
                                     <div className="max-w-280 mx-auto">
                                         {answer}
                                     </div>

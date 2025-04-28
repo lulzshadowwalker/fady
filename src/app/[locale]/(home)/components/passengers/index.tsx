@@ -28,7 +28,7 @@ export function Passengers() {
           .fill(0)
           .map((_, index) => (
             <div className="px-4" key={index}>
-              <div className="text-center py-12 px-4 bg-base text-base-content grid place-content-center rounded-[5px]">
+              <div className="text-center py-12 px-4 bg-base text-base-content grid place-content-center rounded-box">
                 <h3 className="max-w-185 font-semibold leading-12 text-6xl mb-10 text-balance mx-auto">
                   SmartMatch™ Rides
                 </h3>
