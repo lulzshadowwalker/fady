@@ -8,7 +8,7 @@ import Slider from 'react-slick'
 export function Drivers() {
   return (
     <section id="drivers" className="container mx-auto mt-25 pb-35 scroll-mt-24">
-      <h2 className="tracking-[5%] leading-22 font-bold text-center text-[5.31rem] uppercase">
+      <h2 className="tracking-[5%] leading-22 font-bold text-center text-[5.31rem] uppercase max-md:text-[3.6rem]">
         <span className="text-primary">Fady</span> Drivers
       </h2>
 
@@ -47,7 +47,7 @@ export function Drivers() {
           ))}
       </Slider>
 
-      <div className="flex gap-4 mt-21 px-4">
+      <div className="flex gap-4 mt-21 px-4 max-md:flex-col">
         <button className="basis-0 grow flex items-center justify-center gap-4 btn btn-primary btn-outline">
           <FontAwesomeIcon
             icon={faAppStoreIos}
