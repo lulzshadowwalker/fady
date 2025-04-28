@@ -2,13 +2,12 @@
 
 import { IosDownloadGuide } from '@/shared/ios-download-guide'
 import { faAppStoreIos, faGooglePlay } from '@fortawesome/free-brands-svg-icons'
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Slider from 'react-slick'
 
 export function Drivers() {
   return (
-    <section className="container mx-auto mt-25 pb-35">
+    <section id="drivers" className="container mx-auto mt-25 pb-35 scroll-mt-24">
       <h2 className="tracking-[5%] leading-22 font-bold text-center text-[5.31rem] uppercase">
         <span className="text-primary">Fady</span> Drivers
       </h2>

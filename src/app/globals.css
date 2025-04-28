@@ -446,12 +446,13 @@
 }
 
 @layer base {
-  :root {
+  :root, html {
     interpolate-size: allow-keywords;
+    scroll-behavior: smooth;
   }
 
   header + * {
-    padding-top: 5.4rem;
+    padding-top: 6.2rem !important;
   }
 
   /* Chromium / Firefox */
