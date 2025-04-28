@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-
 @theme {
   --color-primary: oklch(55.509% 0.17073 24.618);
   --color-primary-50: oklch(86.748% 0.04198 17.991);
@@ -449,6 +448,10 @@
 @layer base {
   :root {
     interpolate-size: allow-keywords;
+  }
+
+  header + * {
+    padding-top: 5.4rem;
   }
 
   /* Chromium / Firefox */

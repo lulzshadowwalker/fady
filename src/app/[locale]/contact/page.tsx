@@ -31,7 +31,7 @@ const itemVariants = {
     },
 }
 
-export default function ContactUs() {
+export default function Contact() {
     return (
         <motion.main
             className="min-h-screen container mx-auto relative pt-12"
