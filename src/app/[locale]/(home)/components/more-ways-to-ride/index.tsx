@@ -25,7 +25,7 @@ const data = [
 export function MoreWaysToRide() {
     return (
         <section
-            className="relative pt-20 pb-22"
+            className="relative pt-20 pb-22 max-md:px-8"
             style={{
                 backgroundImage: `url(${background.src})`,
                 backgroundSize: 'cover',
@@ -33,7 +33,7 @@ export function MoreWaysToRide() {
             }}
         >
             <div className="container mx-auto z-10">
-                <h2 className="font-semibold text-[5.37rem] leading-22">
+                <h2 className="font-semibold text-[5.37rem] leading-22 max-md:text-5xl">
                     More ways to ride
                 </h2>
                 <ul className="space-y-14 mt-21">
@@ -44,14 +44,13 @@ export function MoreWaysToRide() {
                         >
                             <FontAwesomeIcon
                                 icon={icon}
-                                size="3x"
-                                className="text-primary"
+                                className="text-primary text-6xl max-md:text-4xl"
                             />
                             <div>
-                                <h3 className="font-bold text-5xl leading-12 mb-5">
+                                <h3 className="font-bold text-5xl leading-12 mb-5 max-md:text-3xl max-md:leading-7">
                                     {title}
                                 </h3>
-                                <p className="text-lg font-semibold leading-5">
+                                <p className="text-lg font-semibold leading-5 max-md:text-base !text-secondary">
                                     {description}
                                 </p>
                             </div>
@@ -64,7 +63,7 @@ export function MoreWaysToRide() {
                     how to download on iOS?
                 </div>
 
-                <p className="font-semibold text-[1.75rem] text-primary mt-25">
+                <p className="font-semibold text-[1.75rem] !text-primary mt-25 max-md:text-base">
                     more enhancements on the way
                 </p>
             </div>

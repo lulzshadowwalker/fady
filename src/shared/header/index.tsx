@@ -118,12 +118,12 @@ export function Header() {
             Wallet
           </MotionLink>
 
-          <button
+          <Link
+            href="/#passengers"
             className="btn btn-outline btn-primary"
-            onClick={() => (window.location.href = '/download-app')}
           >
             Download App
-          </button>
+          </Link>
         </motion.nav>
       </div>
 
