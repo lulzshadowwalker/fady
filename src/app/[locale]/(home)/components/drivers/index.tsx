@@ -3,13 +3,16 @@
 import { IosDownloadGuide } from '@/shared/ios-download-guide'
 import { faAppStoreIos, faGooglePlay } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTranslations } from 'next-intl'
 import Slider from 'react-slick'
 
 export function Drivers() {
+  const t = useTranslations('drivers-app')
+
   return (
     <section id="drivers" className="container mx-auto mt-25 pb-35 scroll-mt-24">
       <h2 className="tracking-[5%] leading-22 font-bold text-center text-[5.31rem] uppercase max-md:text-[3.6rem]">
-        <span className="text-primary">Fady</span> Drivers
+        <span className="text-primary">{t('fady')}</span> {t('drivers')}
       </h2>
 
       <Slider
@@ -30,17 +33,10 @@ export function Drivers() {
             <div className="px-4" key={index}>
               <div className="text-center py-12 px-4 bg-base text-base-content grid place-content-center rounded-box">
                 <h3 className="max-w-185 font-semibold leading-12 text-6xl mb-10 text-balance mx-auto">
-                  ProfitBoost System
+                  {t('title')}
                 </h3>
                 <p className="max-w-185 text-2xl leading-7 mx-auto">
-                  FADY helps drivers work smarter, not harder.
-                  Our ProfitBoost system guides you to
-                  high-demand areas and recommends the most
-                  profitable trips based on real-time data,
-                  your schedule, and past performance. No more
-                  chasing random requests — just optimized
-                  driving, better earnings, and more control
-                  over your day.
+                  {t('description')}
                 </p>
               </div>
             </div>
@@ -56,9 +52,9 @@ export function Drivers() {
           />
           <div className="text-center text-secondary-content leading-tight">
             <div className="text-[2.5rem] font-semibold">
-              Download
+            {t('download')}
             </div>
-            <div className="text-lg">for iOS</div>
+            <div className="text-lg">{t('for-ios')}</div>
           </div>
         </button>
 
@@ -70,9 +66,11 @@ export function Drivers() {
           />
           <div className="text-center text-secondary-content">
             <div className="text-[2.5rem] font-semibold">
-              Download
+              {t('download')}
             </div>
-            <div className="text-lg">for Android</div>
+            <div className="text-lg">
+              {t('for-android')}
+            </div>
           </div>
         </button>
       </div>

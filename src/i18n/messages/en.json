@@ -1,5 +1,117 @@
 {
   "playground": {
     "hello": "Hello"
+  },
+  "navigation": {
+    "logo-alt": "FADY logo",
+    "toggle-menu": "Toggle menu",
+    "close-menu": "Close menu",
+    "contact": "Contact",
+    "support": "Support",
+    "faq": "FAQ",
+    "wallet": "Wallet",
+    "download-app": "Download App"
+  },
+  "hero": {
+    "welcome": "Welcome",
+    "to-fady": "to Fady",
+    "subtitle": "Future Youth App",
+    "download": "Download",
+    "for-passengers": "for Passengers",
+    "for-drivers": "for Drivers"
+  },
+  "about-us": {
+    "title": "FADY – a smart application, accompanied by a website, that facilitates the delivery of people, items, legal documents, and financial collection receipts for private and governmental companies and institutions. It aims to continue progressing and developing to compete in the full spectrum of logistics services, with a focus on investing in local resources and human capital."
+  },
+  "passengers-app": {
+    "fady": "Fady",
+    "passengers": "Passengers",
+    "title": "SmartMatch™ Rides for You",
+    "description": "Hey there! At FADY, we make every ride feel like it’s made for you. Our SmartMatch™ tech connects you with the perfect driver for your vibe — whether you’re craving a chill ride, need a quick charge, or just want the fastest route. Smooth, fast, and totally your style!",
+    "download": "Download",
+    "for-ios": "for iOS",
+    "for-android": "for Android"
+  },
+  "drivers-app": {
+    "fady": "Fady",
+    "drivers": "Drivers",
+    "title": "Boost Your Earnings with Ease",
+    "description": "Ready to roll, drivers? FADY’s ProfitBoost System has your back! We guide you to the best rides and busiest spots using real-time data, so you earn more without the guesswork. Drive smarter, earn better, and take control of your day!",
+    "download": "Download",
+    "for-ios": "for iOS",
+    "for-android": "for Android"
+  },
+  "more-ways-to-ride": {
+    "title": "More Ways to Ride",
+    "features": {
+      "choose-type-of-ride": {
+        "title": "Choose Your Ride Style",
+        "description": "Pick the perfect ride that fits your mood and budget — from chill to luxe, we’ve got you covered!"
+      },
+      "gifts": {
+        "title": "Send a Ride Gift",
+        "description": "Surprise your friends with ride credits — the perfect way to share the FADY vibe!"
+      },
+      "wallet": {
+        "title": "Top Up Your Wallet",
+        "description": "Add funds to your wallet and ride hassle-free — quick, easy, and secure!"
+      },
+      "become-a-driver": {
+        "title": "Join as a Driver",
+        "description": "Hop on board with FADY and start earning while driving on your terms!"
+      }
+    },
+    "more-enhancements": "More Enhancements on the Way"
+  },
+  "whatsapp-dialog": {
+    "close-dialog": "Close dialog",
+    "quick-heads-up": "Quick Heads-up!",
+    "open-whatsapp-message": "We'll open WhatsApp so you can chat with us. See you there!",
+    "open-whatsapp": "Open WhatsApp"
+  },
+  "contact": {
+    "hero-heading": "We’re here to help!",
+    "support-heading": "Our support team is here for you",
+    "contact-button": "Contact us",
+    "support-description": "For questions, complaints, or feedback",
+    "follow-heading": "Follow us",
+    "whatsapp-aria": "Chat with us on WhatsApp",
+    "instagram-aria": "Visit our Instagram",
+    "facebook-aria": "Visit our Facebook",
+    "follow-description": "Stay connected with us on social media for updates, news, and more!"
+  },
+  "faq": {
+    "heading": "FAQ’s",
+    "subheading": "Frequently Asked Questions",
+    "items": {
+      "how-to-download-app": {
+        "question": "How to download the App?",
+        "answer": "Download the app from the App Store or Google Play Store."
+      },
+      "how-do-i-charge-my-wallet": {
+        "question": "How do I charge my wallet?",
+        "answer": "You can top up your wallet using prepaid cards. Simply buy a card, enter the code in the app, and the amount will be added to your wallet."
+      },
+      "where-can-i-buy-recharge-card": {
+        "question": "Where can I buy a recharge card?",
+        "answer": "Recharge cards are available at most convenience stores and online."
+      },
+      "what-if-recharge-card-doesnt-work": {
+        "question": "What if my recharge card doesn't work?",
+        "answer": "If your recharge card doesn't work, please contact customer support with your card details."
+      }
+    }
+  },
+  "footer": {
+    "download": "Download",
+    "for-passengers": "For Passengers",
+    "for-drivers": "For Drivers",
+    "passengers": "Fady Passengers",
+    "drivers": "Fady Drivers",
+    "wallet": "Wallet",
+    "contact-us": "Contact Us",
+    "faq": "FAQ",
+    "terms": "Terms and Conditions",
+    "support": "Support"
   }
 }

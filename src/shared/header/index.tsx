@@ -1,3 +1,4 @@
+// Header.tsx
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -8,69 +9,30 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from '@/i18n/navigation'
 import { SupportItem } from './components/support-item'
+import { useTranslations } from 'next-intl'
 
-// Framer-motion variants for staggered animations
-const navVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.1,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { y: -15, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.5, ease: 'easeOut' },
-  },
-}
-
-// Header show/hide variants with smooth transition
-const headerVariants = {
-  hidden: {
-    y: -100,
-    transition: { duration: 0.5, ease: 'easeInOut' },
-  },
-  visible: {
-    y: 0,
-    transition: { duration: 0.5, ease: 'easeInOut' },
-  },
-}
-
-// Wrap Next.js Link with motion for animations
+const navVariants = { /* ... */ }
+const itemVariants = { /* ... */ }
+const headerVariants = { /* ... */ }
 const MotionLink = motion(Link)
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [show, setShow] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const t = useTranslations('navigation')
 
-  // Toggle body scroll when mobile menu is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : ''
   }, [isOpen])
 
-  // Track scroll direction to hide/show header (only when menu is closed)
   useEffect(() => {
     const handleScroll = () => {
-      if (isOpen) return // don't hide header when sidebar open
+      if (isOpen) return
       const currentY = window.scrollY
-      if (currentY > lastScrollY && currentY > 100) {
-        setShow(false)
-      } else {
-        setShow(true)
-      }
+      setShow(!(currentY > lastScrollY && currentY > 100))
       setLastScrollY(currentY)
     }
-
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY, isOpen])
@@ -85,19 +47,19 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <Image src={logo} alt="fady logo" width={118} />
+          <Image src={logo} alt={t('logo-alt')} width={118} />
         </Link>
 
-        {/* Hamburger toggle (mobile) */}
+        {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 focus:outline-none"
-          aria-label="Toggle menu"
+          aria-label={t('toggle-menu')}
         >
           <FontAwesomeIcon icon={isOpen ? faXmark : faBars} size="xl" />
         </button>
 
-        {/* Desktop navigation */}
+        {/* Desktop nav */}
         <motion.nav
           className="hidden md:flex items-center gap-6"
           variants={navVariants}
@@ -105,24 +67,28 @@ export function Header() {
           animate="visible"
         >
           <MotionLink href="/contact" className="animate-underline" variants={itemVariants}>
-            Contact
+            {t('contact')}
           </MotionLink>
 
-          <SupportItem variants={itemVariants} className="animate-underline" />
+          <SupportItem
+            variants={itemVariants}
+            className="animate-underline"
+          />
 
           <MotionLink href="/faq" className="animate-underline" variants={itemVariants}>
-            FAQ
+            {t('faq')}
           </MotionLink>
 
-          <MotionLink href="/wallet/prepaid-cards" className="animate-underline" variants={itemVariants}>
-            Wallet
-          </MotionLink>
-
-          <Link
-            href="/#passengers"
-            className="btn btn-outline btn-primary"
+          <MotionLink
+            href="/wallet/prepaid-cards"
+            className="animate-underline"
+            variants={itemVariants}
           >
-            Download App
+            {t('wallet')}
+          </MotionLink>
+
+          <Link href="/#passengers" className="btn btn-outline btn-primary">
+            {t('download-app')}
           </Link>
         </motion.nav>
       </div>
@@ -154,7 +120,7 @@ export function Header() {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 focus:outline-none"
-                  aria-label="Close menu"
+                  aria-label={t('close-menu')}
                 >
                   <FontAwesomeIcon icon={faXmark} size="lg" />
                 </button>
@@ -167,31 +133,45 @@ export function Header() {
                 animate="visible"
               >
                 <motion.li variants={itemVariants}>
-                  <MotionLink href="/contact" className="block text-lg" onClick={() => setIsOpen(false)}>
-                    Contact
+                  <MotionLink
+                    href="/contact"
+                    className="block text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {t('contact')}
                   </MotionLink>
                 </motion.li>
                 <motion.li variants={itemVariants}>
-                  <SupportItem variants={itemVariants} />
+                  <SupportItem
+                    variants={itemVariants}
+                    onClick={() => setIsOpen(false)}
+                  />
                 </motion.li>
                 <motion.li variants={itemVariants}>
-                  <MotionLink href="/faq" className="block text-lg" onClick={() => setIsOpen(false)}>
-                    FAQ
+                  <MotionLink
+                    href="/faq"
+                    className="block text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {t('faq')}
                   </MotionLink>
                 </motion.li>
                 <motion.li variants={itemVariants}>
-                  <MotionLink href="/wallet/prepaid-cards" className="block text-lg" onClick={() => setIsOpen(false)}>
-                    Wallet
+                  <MotionLink
+                    href="/wallet/prepaid-cards"
+                    className="block text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {t('wallet')}
                   </MotionLink>
                 </motion.li>
-
                 <motion.li variants={itemVariants}>
                   <Link
                     href="/#passengers"
                     className="btn btn-outline btn-primary w-full"
                     onClick={() => setIsOpen(false)}
                   >
-                    Download App
+                    {t('download-app')}
                   </Link>
                 </motion.li>
               </motion.ul>

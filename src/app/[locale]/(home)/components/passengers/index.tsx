@@ -3,13 +3,16 @@
 import { IosDownloadGuide } from '@/shared/ios-download-guide'
 import { faAppStoreIos, faGooglePlay } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTranslations } from 'next-intl'
 import Slider from 'react-slick'
 
 export function Passengers() {
+  const t = useTranslations('passengers-app')
+
   return (
     <section id="passengers" className="container mx-auto my-25 scroll-mt-24">
       <h2 className="tracking-[5%] leading-22 font-bold text-center text-[5.31rem] uppercase max-md:text-[3.6rem]">
-        <span className="text-primary">Fady</span> Passengers
+        <span className="text-primary">{t('fady')}</span> {t('passengers')}
       </h2>
 
       <Slider
@@ -30,18 +33,10 @@ export function Passengers() {
             <div className="px-4" key={index}>
               <div className="text-center py-12 px-4 bg-base text-base-content grid place-content-center rounded-box">
                 <h3 className="max-w-185 font-semibold leading-12 text-6xl mb-10 text-balance mx-auto">
-                  SmartMatch™ Rides
+                  {t('title')}
                 </h3>
                 <p className="max-w-185 text-2xl leading-7 mx-auto">
-                  At FADY, we believe every ride should feel
-                  personal. That’s why we use smart algorithms
-                  to match you with the best driver for your
-                  preferences — whether you enjoy a quiet
-                  trip, need to charge your phone, or just
-                  want the fastest route possible. With
-                  SmartMatch™, your journey becomes smoother,
-                  faster, and more comfortable — tailored
-                  exactly to your vibe.
+                  {t('description')}
                 </p>
               </div>
             </div>
@@ -57,9 +52,11 @@ export function Passengers() {
           />
           <div className="text-center text-secondary-content leading-tight">
             <div className="text-[2.5rem] font-semibold">
-              Download
+              {t('download')}
             </div>
-            <div className="text-lg">for iOS</div>
+            <div className="text-lg">
+              {t('for-ios')}
+            </div>
           </div>
         </button>
 
@@ -71,9 +68,12 @@ export function Passengers() {
           />
           <div className="text-center text-secondary-content">
             <div className="text-[2.5rem] font-semibold">
-              Download
+              {t('download')}
             </div>
-            <div className="text-lg">for Android</div>
+            <div className="text-lg">
+              {t('for-android')}
+            </div>
+
           </div>
         </button>
       </div>

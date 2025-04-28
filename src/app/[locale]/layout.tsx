@@ -36,7 +36,7 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) notFound()
 
   return (
-    <html lang="en">
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body className={`${cairo.className} antialiased`}>
         <Providers>
           <Header />

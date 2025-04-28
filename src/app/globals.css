@@ -399,7 +399,7 @@
   }
 
   .modal-box .modal-close {
-    @apply absolute right-4 top-4;
+    @apply absolute end-4 top-4;
   }
 
   .modal-action {

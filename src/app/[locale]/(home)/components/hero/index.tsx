@@ -8,8 +8,11 @@ import { faGooglePlay } from '@fortawesome/free-brands-svg-icons/faGooglePlay'
 import { IosDownloadGuide } from '@/shared/ios-download-guide'
 import hero from "@/assets/images/hero.png"
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 export function Hero() {
+  const t = useTranslations('hero')
+
   return (
     <section className="container mx-auto mt-12 flex gap-4 justify-between relative">
       <div className="px-12">
@@ -19,12 +22,12 @@ export function Hero() {
             'text-[7.1rem] font-bold leading-[125px] uppercase text-base-content max-lg:text-[5.6rem]'
           )}
         >
-          Welcome
+          {t('welcome')}
           <br />
-          to Fady
+          {t('to-fady')}
         </h1>
         <p className="text-3xl leading-[50px] font-medium">
-          Future Youth App
+          {t('subtitle')}
         </p>
 
         <div className="grid grid-cols-2 gap-[0.65rem] max-w-fit mt-8">
@@ -33,9 +36,9 @@ export function Hero() {
 
             <div>
               <div className="text-2xl font-semibold">
-                Download
+              {t('download')}
               </div>
-              <div className="text-xs">for passengers</div>
+              <div className="text-xs">{t('for-passengers')}</div>
             </div>
           </button>
 
@@ -44,9 +47,9 @@ export function Hero() {
 
             <div>
               <div className="text-2xl font-semibold">
-                Download
+              {t('download')}
               </div>
-              <div className="text-xs">for passengers</div>
+              <div className="text-xs">{t('for-passengers')}</div>
             </div>
           </button>
 
@@ -55,9 +58,9 @@ export function Hero() {
 
             <div>
               <div className="text-2xl font-semibold">
-                Download
+              {t('download')}
               </div>
-              <div className="text-xs">for drivers</div>
+              <div className="text-xs">{t('for-drivers')}</div>
             </div>
           </button>
 
@@ -66,9 +69,9 @@ export function Hero() {
 
             <div>
               <div className="text-2xl font-semibold">
-                Download
+              {t('download')}
               </div>
-              <div className="text-xs">for drivers</div>
+              <div className="text-xs">{t('for-drivers')}</div>
             </div>
           </button>
         </div>
