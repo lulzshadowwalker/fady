@@ -2,10 +2,14 @@
 
 import { faInfoCircle, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { HTMLAttributes, HTMLProps, useRef } from "react"
-import Plyr from "plyr-react"
+import { HTMLAttributes, useRef } from "react"
 import "plyr-react/plyr.css"
 import { cn } from "@/lib/cn"
+import dynamic from "next/dynamic"
+
+const Plyr = dynamic(() => import("plyr-react"), {
+  ssr: false,
+})
 
 export function IosDownloadGuide({
   className,

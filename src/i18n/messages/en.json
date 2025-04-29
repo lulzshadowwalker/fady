@@ -113,5 +113,40 @@
     "faq": "FAQ",
     "terms": "Terms and Conditions",
     "support": "Support"
+  },
+  "wallet": {
+    "prepaid-cards": {
+      "steps": {
+        "title": "Charge Your Wallet",
+        "description": "Use prepaid recharge cards to top up your wallet easily",
+        "items": {
+          "step-1": "Buy a card",
+          "step-2": "Open the app",
+          "step-3": "Enter the code",
+          "step-4": "Done!"
+        }
+      },
+      "questions": {
+        "title": "Any Questions?",
+        "button-text": "Help"
+      },
+      "card-selection": {
+        "title": "Select your card type",
+        "caption": "Prepaid Credit",
+        "logo-alt": "Logo",
+        "whatsapp": {
+          "message": "Hello! 👋 I’d like to get a {value} JOD prepaid credit card. Could you help me with the purchase? Thanks!"
+        }
+      },
+      "guide": {
+        "title": "Watch how to charge your wallet",
+        "button-text": "Play video"
+      },
+      "video-dialog": {
+        "title": "Prepaid Card Charging Guide",
+        "description": "Here’s a quick walkthrough on how to top up your wallet using prepaid cards.",
+        "close-button": "Got it!"
+      }
+    }
   }
 }
