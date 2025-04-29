@@ -14,6 +14,7 @@ import { Providers } from '@/lib/context/providers'
 import { hasLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
+import { Cursor } from '@/shared/cursor'
 
 const cairo = Cairo({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default async function RootLayout({
           <Header />
           {children}
           <Footer />
+          <Cursor />
         </Providers>
       </body>
     </html>
