@@ -10,6 +10,10 @@ import {
   faWhatsapp,
   faInstagram,
   faFacebook,
+  faThreads,
+  faYoutube,
+  faSnapchat,
+  faXTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 import { motion } from 'framer-motion'
 import { Link } from '@/i18n/navigation'
@@ -19,17 +23,28 @@ import { useTranslations } from 'next-intl'
 // Variants for footer animation
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+  },
 }
 
 const sectionVariants = {
   hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.6, ease: 'easeOut' },
+  },
 }
 
 const itemVariants = {
   hidden: { y: 10, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: 'easeOut' },
+  },
 }
 
 // Wrap Next.js Link with motion for animations
@@ -37,7 +52,45 @@ const MotionLink = motion(Link)
 
 export function Footer() {
   const t = useTranslations('footer')
-  const socialIcons = [faWhatsapp, faInstagram, faFacebook]
+
+  // All social profiles
+  const socialLinks = [
+    {
+      icon: faWhatsapp,
+      url: 'https://api.whatsapp.com/send?phone=962799998586',
+      label: 'WhatsApp',
+    },
+    {
+      icon: faInstagram,
+      url: 'https://www.instagram.com/FADYDRIVERS',
+      label: 'Instagram',
+    },
+    {
+      icon: faFacebook,
+      url: 'https://www.facebook.com/FADYDRIVERS',
+      label: 'Facebook',
+    },
+    {
+      icon: faThreads,
+      url: 'https://www.threads.net/@FADYDRIVERS',
+      label: 'Threads',
+    },
+    {
+      icon: faYoutube,
+      url: 'https://www.youtube.com/@FADYDRIVERS',
+      label: 'YouTube',
+    },
+    {
+      icon: faSnapchat,
+      url: 'https://www.snapchat.com/add/FADYDRIVERS',
+      label: 'Snapchat',
+    },
+    {
+      icon: faXTwitter,
+      url: 'https://twitter.com/FADYDRIVERS',
+      label: 'Twitter',
+    },
+  ]
 
   return (
     <motion.footer
@@ -50,7 +103,7 @@ export function Footer() {
 
         {/* Logo */}
         <motion.div variants={sectionVariants}>
-          <Image src={logo} alt="fady vertical logo" width={60} />
+          <Image src={logo} alt="Fady vertical logo" width={60} />
         </motion.div>
 
         {/* App Buttons: 2×2 grid */}
@@ -88,8 +141,16 @@ export function Footer() {
             { href: '/wallet/prepaid-cards', label: t('wallet') },
             { href: '/contact', label: t('contact-us') },
           ].map(({ href, label }) => (
-            <motion.li key={href} variants={itemVariants} whileHover={{ x: 5 }} transition={{ type: 'tween', duration: 0.3 }}>
-              <MotionLink href={href} className="animate-underline animate-underline-secondary-content">
+            <motion.li
+              key={href}
+              variants={itemVariants}
+              whileHover={{ x: 5 }}
+              transition={{ type: 'tween', duration: 0.3 }}
+            >
+              <MotionLink
+                href={href}
+                className="animate-underline animate-underline-secondary-content"
+              >
                 {label}
               </MotionLink>
             </motion.li>
@@ -106,9 +167,18 @@ export function Footer() {
             { href: '', label: <SupportItem /> },
             { href: '/terms-and-conditions', label: t('terms') },
           ].map(({ href, label }, i) => (
-            <motion.li key={i} variants={itemVariants} whileHover={{ x: 5 }} transition={{ type: 'tween', duration: 0.3 }} className="text-start">
+            <motion.li
+              key={i}
+              variants={itemVariants}
+              whileHover={{ x: 5 }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className="text-start"
+            >
               {typeof label === 'string' ? (
-                <MotionLink href={href} className="animate-underline animate-underline-secondary-content">
+                <MotionLink
+                  href={href}
+                  className="animate-underline animate-underline-secondary-content"
+                >
                   {label}
                 </MotionLink>
               ) : (
@@ -118,14 +188,25 @@ export function Footer() {
           ))}
         </motion.ul>
 
-        {/* Social Icons */}
+        {/* Social Icons: 2 rows on mobile, 2 columns on desktop */}
         <motion.ul
-          className="flex flex-row items-center justify-center gap-6 md:flex-col md:space-y-4 md:items-start"
+          className="
+            grid grid-rows-2 grid-flow-col gap-6
+            md:grid-rows-none md:grid-cols-2 md:grid-flow-row
+          "
           variants={sectionVariants}
         >
-          {socialIcons.map((icon, idx) => (
+          {socialLinks.map(({ icon, url, label }, idx) => (
             <motion.li key={idx} variants={itemVariants}>
-              <FontAwesomeIcon icon={icon} size="2x" className="social-icon" />
+              <a
+                href={url}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                aria-label={label}
+                className="inline-block"
+              >
+                <FontAwesomeIcon icon={icon} size="2x" className="social-icon" />
+              </a>
             </motion.li>
           ))}
         </motion.ul>
