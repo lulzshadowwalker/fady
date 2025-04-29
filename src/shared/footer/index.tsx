@@ -60,9 +60,9 @@ export function Footer() {
         >
           {[
             { icon: faAppStoreIos, subtitle: 'for-passengers' },
-            { icon: faGooglePlay,  subtitle: 'for-passengers' },
+            { icon: faGooglePlay, subtitle: 'for-passengers' },
             { icon: faAppStoreIos, subtitle: 'for-drivers' },
-            { icon: faGooglePlay,  subtitle: 'for-drivers' },
+            { icon: faGooglePlay, subtitle: 'for-drivers' },
           ].map(({ icon, subtitle }, idx) => (
             <button
               key={idx}
@@ -84,9 +84,9 @@ export function Footer() {
         >
           {[
             { href: '/#passengers', label: t('passengers') },
-            { href: '/#drivers',    label: t('drivers')    },
+            { href: '/#drivers', label: t('drivers') },
             { href: '/wallet/prepaid-cards', label: t('wallet') },
-            { href: '/contact',     label: t('contact-us') },
+            { href: '/contact', label: t('contact-us') },
           ].map(({ href, label }) => (
             <motion.li key={href} variants={itemVariants} whileHover={{ x: 5 }} transition={{ type: 'tween', duration: 0.3 }}>
               <MotionLink href={href} className="animate-underline animate-underline-secondary-content">
@@ -103,7 +103,7 @@ export function Footer() {
         >
           {[
             { href: '/faq', label: t('faq') },
-            { href: '',    label: <SupportItem /> },
+            { href: '', label: <SupportItem /> },
             { href: '/terms-and-conditions', label: t('terms') },
           ].map(({ href, label }, i) => (
             <motion.li key={i} variants={itemVariants} whileHover={{ x: 5 }} transition={{ type: 'tween', duration: 0.3 }} className="text-start">
@@ -125,7 +125,7 @@ export function Footer() {
         >
           {socialIcons.map((icon, idx) => (
             <motion.li key={idx} variants={itemVariants}>
-              <FontAwesomeIcon icon={icon} size="2x" />
+              <FontAwesomeIcon icon={icon} size="2x" className="social-icon" />
             </motion.li>
           ))}
         </motion.ul>

@@ -87,7 +87,7 @@ export default function Contact() {
               <FontAwesomeIcon
                 icon={faWhatsapp}
                 size="3x"
-                className="transition-all hover:text-primary cursor-pointer"
+                className="social-icon"
               />
             </a>
 
@@ -100,7 +100,7 @@ export default function Contact() {
               <FontAwesomeIcon
                 icon={faInstagram}
                 size="3x"
-                className="transition-all hover:text-primary cursor-pointer"
+                className="social-icon"
               />
             </a>
 
@@ -113,7 +113,7 @@ export default function Contact() {
               <FontAwesomeIcon
                 icon={faFacebook}
                 size="3x"
-                className="transition-all hover:text-primary cursor-pointer"
+                className="social-icon"
               />
             </a>
           </div>

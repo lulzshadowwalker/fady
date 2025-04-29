@@ -416,6 +416,10 @@
 }
 
 @layer utilities {
+  .social-icon {
+    @apply transition-all hover:text-primary cursor-pointer
+  }
+
   .rounded-box {
     border-radius: 5px;
   }
