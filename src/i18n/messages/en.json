@@ -148,5 +148,11 @@
         "close-button": "Got it!"
       }
     }
+  },
+  "ios-download-guide": {
+    "trigger": "How to download on iOS?",
+    "title": "Get the App on Your iPhone",
+    "description": "Follow this quick guide to install our app on your iOS device in seconds!",
+    "close-button": "Got it!"
   }
 }
