@@ -39,7 +39,7 @@ export function Videos() {
                 className="absolute left-4 top-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full border border-white bg-transparent text-white
                    transform -translate-y-1/2"
                 onClick={handlePrev}
-                فاضي="Previous"
+                area-label="Previous"
             >
                 <FontAwesomeIcon icon={faChevronLeft} />
             </button>
@@ -51,7 +51,7 @@ export function Videos() {
                 className="absolute right-4 top-1/2 z-10 w-10 h-10 flex items-center justify-center rounded-full border border-white bg-transparent text-white
                    transform -translate-y-1/2"
                 onClick={handleNext}
-                فاضي="Next"
+                area-label="Next"
             >
                 <FontAwesomeIcon icon={faChevronRight} />
             </button>

@@ -203,7 +203,7 @@ export function Footer() {
                                 href={url}
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
-                                فاضي={label}
+                                area-label={label}
                                 className="inline-block"
                             >
                                 <FontAwesomeIcon

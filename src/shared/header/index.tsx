@@ -75,7 +75,7 @@ export function Header() {
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="md:hidden p-2 focus:outline-none"
-                    فاضي={t('toggle-menu')}
+                    area-label={t('toggle-menu')}
                 >
                     <FontAwesomeIcon
                         icon={isOpen ? faXmark : faBars}
@@ -173,7 +173,7 @@ export function Header() {
                                 <button
                                     onClick={() => setIsOpen(false)}
                                     className="p-2 focus:outline-none"
-                                    فاضي={t('close-menu')}
+                                    area-label={t('close-menu')}
                                 >
                                     <FontAwesomeIcon icon={faXmark} size="lg" />
                                 </button>

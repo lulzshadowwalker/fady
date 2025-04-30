@@ -52,7 +52,7 @@ export function IosDownloadGuide({
                     <form method="dialog">
                         <button
                             className="modal-close btn"
-                            فاضي={t('close-button')}
+                            area-label={t('close-button')}
                         >
                             <FontAwesomeIcon icon={faXmark} size="lg" />
                         </button>

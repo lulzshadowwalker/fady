@@ -84,7 +84,7 @@ export default function Contact() {
                             href="https://api.whatsapp.com/send?phone=962799998586"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            فاضي={t('whatsapp-aria')}
+                            area-label={t('whatsapp-aria')}
                         >
                             <FontAwesomeIcon
                                 icon={faWhatsapp}
@@ -98,7 +98,7 @@ export default function Contact() {
                             href="https://www.instagram.com/FADYDRIVERS"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            فاضي={t('instagram-aria')}
+                            area-label={t('instagram-aria')}
                         >
                             <FontAwesomeIcon
                                 icon={faInstagram}
@@ -112,7 +112,7 @@ export default function Contact() {
                             href="https://www.facebook.com/FADYDRIVERS"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            فاضي={t('facebook-aria')}
+                            area-label={t('facebook-aria')}
                         >
                             <FontAwesomeIcon
                                 icon={faFacebook}
@@ -126,7 +126,7 @@ export default function Contact() {
                             href="https://www.threads.net/@FADYDRIVERS"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            فاضي={t('threads-aria')}
+                            area-label={t('threads-aria')}
                         >
                             <FontAwesomeIcon
                                 icon={faThreads}
@@ -140,7 +140,7 @@ export default function Contact() {
                             href="https://www.youtube.com/@FADYDRIVERS"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            فاضي={t('youtube-aria')}
+                            area-label={t('youtube-aria')}
                         >
                             <FontAwesomeIcon
                                 icon={faYoutube}
@@ -154,7 +154,7 @@ export default function Contact() {
                             href="https://www.snapchat.com/add/FADYDRIVERS"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            فاضي={t('snapchat-aria')}
+                            area-label={t('snapchat-aria')}
                         >
                             <FontAwesomeIcon
                                 icon={faSnapchat}
@@ -168,7 +168,7 @@ export default function Contact() {
                             href="https://twitter.com/FADYDRIVERS"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            فاضي={t('twitter-aria')}
+                            area-label={t('twitter-aria')}
                         >
                             <FontAwesomeIcon
                                 icon={faXTwitter}
