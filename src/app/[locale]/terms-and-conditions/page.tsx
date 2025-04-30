@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
+// Animation variants
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -20,6 +21,20 @@ const itemVariants = {
         transition: { duration: 0.6, ease: 'easeOut' },
     },
 }
+
+// Static list of section keys to preserve order
+const sectionKeys = [
+    'introduction',
+    'use-of-service',
+    'user-responsibilities',
+    'intellectual-property',
+    'limitation-of-liability',
+    'governing-law',
+    'changes',
+    'contact-us',
+] as const
+
+type SectionKey = (typeof sectionKeys)[number]
 
 export default function Terms() {
     const t = useTranslations('terms')
@@ -42,31 +57,26 @@ export default function Terms() {
                     initial="hidden"
                     animate="visible"
                 >
-                    {Object.entries(t('sections')).map(
-                        ([key, section]: any) => (
-                            <motion.section key={key} variants={itemVariants}>
-                                <h2 className="font-semibold text-[2.5rem] leading-10 mb-4 max-lg:text-2xl">
-                                    {section.title}
-                                </h2>
-                                {key === 'contact-us' ? (
-                                    <p className="text-2xl font-medium leading-7 max-lg:text-xl">
-                                        {section.intro}{' '}
-                                        <Link
-                                            href="/contact"
-                                            className="underline"
-                                        >
-                                            {section['link-text']}
-                                        </Link>
-                                        {section.outro}
-                                    </p>
-                                ) : (
-                                    <p className="text-2xl font-medium leading-7 max-lg:text-xl">
-                                        {section.content}
-                                    </p>
-                                )}
-                            </motion.section>
-                        ),
-                    )}
+                    {sectionKeys.map((key) => (
+                        <motion.section key={key} variants={itemVariants}>
+                            <h2 className="font-semibold text-[2.5rem] leading-10 mb-4 max-lg:text-2xl">
+                                {t(`sections.${key}.title`)}
+                            </h2>
+                            {key === 'contact-us' ? (
+                                <p className="text-2xl font-medium leading-7 max-lg:text-xl">
+                                    {t(`sections.${key}.intro`)}{' '}
+                                    <Link href="/contact" className="underline">
+                                        {t(`sections.${key}.link-text`)}
+                                    </Link>
+                                    {t(`sections.${key}.outro`)}
+                                </p>
+                            ) : (
+                                <p className="text-2xl font-medium leading-7 max-lg:text-xl">
+                                    {t(`sections.${key}.content`)}
+                                </p>
+                            )}
+                        </motion.section>
+                    ))}
                 </motion.div>
             </div>
         </main>
