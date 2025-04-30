@@ -16,12 +16,11 @@ export const statsRepository = () =>
 /**
  * Returns the development or production value based on the current environment.
  *
- * @param dev - The value to use in a development environment.
- * @param prod - The value to use in a production environment.
+ * @param dev  – The value to use in a development environment.
+ * @param prod – The value to use in a production environment.
  * @returns The value corresponding to the current environment.
  */
-function either(dev: any, prod: any): any {
+export function either<T>(dev: T, prod: T): T {
     const isDev = process.env.NODE_ENV === 'development'
-
     return isDev ? dev : prod
 }

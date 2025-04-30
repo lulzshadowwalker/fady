@@ -1,5 +1,6 @@
 'use client'
 
+import { Link } from '@/i18n/navigation'
 import { motion } from 'framer-motion'
 
 // Animation variants
@@ -107,7 +108,7 @@ export default function Terms() {
               8. Contact Us
             </h2>
             <p className="text-2xl font-medium leading-7 max-lg:text-xl">
-              If you have any questions or concerns about these Terms, please <a href="/contact" className="underline">contact our support team</a>.
+              If you have any questions or concerns about these Terms, please <Link href="/contact" className="underline">contact our support team</Link>.
             </p>
           </motion.section>
         </motion.div>

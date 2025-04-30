@@ -8,11 +8,8 @@ type State = {
     stats?: Stats
 }
 
-type Actions = {
-    //
-}
 
-const StatsContext = createContext<(State & Actions) | null>(null)
+const StatsContext = createContext<(State) | null>(null)
 
 export function StatsProvider({ children }: { children: React.ReactNode }) {
     const [stats, setStats] = useState<Stats>()
@@ -28,7 +25,7 @@ export function StatsProvider({ children }: { children: React.ReactNode }) {
     )
 }
 
-export function useStats(): State & Actions {
+export function useStats(): State {
     const context = useContext(StatsContext)
 
     if (!context) {

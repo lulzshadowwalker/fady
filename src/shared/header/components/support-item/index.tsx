@@ -1,13 +1,13 @@
 'use client'
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { WhatsappDialog, WhatsappDialogRef } from "@/shared/whatsapp-dialog"
 import { useRef } from "react"
 import { cn } from "@/lib/cn"
 import { useTranslations } from "next-intl"
 
 type Props = {
-  variants?: any
+  variants?: Variants
   className?: string
   onClick?: () => void
 }

@@ -15,6 +15,7 @@ import { hasLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { Cursor } from '@/shared/cursor'
+import { NextIntlClientProvider } from 'next-intl'
 
 const cairo = Cairo({
   subsets: ['latin'],
@@ -39,12 +40,14 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body className={`${cairo.className} antialiased`}>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-          <Cursor />
-        </Providers>
+        <NextIntlClientProvider>
+          <Providers>
+            <Header />
+            {children}
+            <Footer />
+            <Cursor />
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
