@@ -4,7 +4,6 @@ import { Link } from '@/i18n/navigation'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
-// Animation variants
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
