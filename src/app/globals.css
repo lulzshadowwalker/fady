@@ -508,11 +508,10 @@
     .plyr {
         border-radius: 5px;
     }
-    /*
+
     .plyr {
         max-height: 40.3333dvh !important;
-        aspect-ratio: 0.8;
-    } */
+    }
 
     .slick-dots {
         bottom: -40px !important;
