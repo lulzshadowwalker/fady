@@ -34,8 +34,6 @@ const sectionKeys = [
     'contact-us',
 ] as const
 
-type SectionKey = (typeof sectionKeys)[number]
-
 export default function Terms() {
     const t = useTranslations('terms')
 

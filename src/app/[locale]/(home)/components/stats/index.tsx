@@ -15,45 +15,48 @@ export function Stats() {
             <Marquee
                 autoFill
                 speed={30}
-                className="py-24 [mask-image:linear-gradient(to_right,transparent,black,transparent)]"
+                gradient={false}
+                className="py-16 sm:py-24 [mask-image:linear-gradient(to_right,transparent,black,transparent)]"
             >
                 {stats?.driverCount != null && (
-                    <div className="mx-8">
-                        <span className="text-8xl leading-8 font-light">
+                    <div className="mx-4 sm:mx-8 flex-shrink-0">
+                        <span className="text-6xl sm:text-8xl leading-8 font-light">
                             {stats.driverCount}+
                         </span>
-                        <p className="text-xl leading-5 font-semibold mt-4 text-center">
+                        <p className="text-lg sm:text-xl leading-5 font-semibold mt-4 text-center">
                             {t('drivers')}
                         </p>
                     </div>
                 )}
 
                 {stats?.customerCount != null && (
-                    <div className="mx-8">
-                        <span className="text-8xl leading-8 font-light">
+                    <div className="mx-4 sm:mx-8 flex-shrink-0">
+                        <span className="text-6xl sm:text-8xl leading-8 font-light">
                             {stats.customerCount}+
                         </span>
-                        <p className="text-xl leading-5 font-semibold mt-4 text-center">
+                        <p className="text-lg sm:text-xl leading-5 font-semibold mt-4 text-center">
                             {t('customers')}
                         </p>
                     </div>
                 )}
 
                 {stats?.rideCount != null && (
-                    <div className="mx-8">
-                        <span className="text-8xl leading-8 font-light">
+                    <div className="mx-4 sm:mx-8 flex-shrink-0">
+                        <span className="text-6xl sm:text-8xl leading-8 font-light">
                             {stats.rideCount}+
                         </span>
-                        <p className="text-xl leading-5 font-semibold mt-4 text-center">
+                        <p className="text-lg sm:text-xl leading-5 font-semibold mt-4 text-center">
                             {t('rides')}
                         </p>
                     </div>
                 )}
 
                 {/* always show this static value */}
-                <div className="mx-8">
-                    <span className="text-8xl leading-8 font-light">1015+</span>
-                    <p className="text-xl leading-5 font-semibold mt-4 text-center">
+                <div className="mx-4 sm:mx-8 flex-shrink-0">
+                    <span className="text-6xl sm:text-8xl leading-8 font-light">
+                        1015+
+                    </span>
+                    <p className="text-lg sm:text-xl leading-5 font-semibold mt-4 text-center">
                         {t('downloads')}
                     </p>
                 </div>

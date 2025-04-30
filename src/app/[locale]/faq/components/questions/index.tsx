@@ -9,7 +9,7 @@ export function Questions() {
     const t = useTranslations('faq.questions')
 
     return (
-        <section className="max-w-220 mx-auto flex justify-between items-center gap-8 px-4 max-lg:flex-col min-h-[min(33dvh,360px)] my-16 max-lg:my-6 max-lg:justify-center relative">
+        <section className="max-w-220 mx-auto flex justify-between items-center gap-8 px-4 max-lg:flex-col min-h-[min(33dvh,360px)] my-16 max-lg:my-6 max-lg:justify-center relative overflow-hidden">
             <Image
                 src={background}
                 alt=""

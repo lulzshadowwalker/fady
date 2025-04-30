@@ -46,7 +46,7 @@ export default function Contact() {
             <Image src={background} alt="" fill className="-z-50" />
 
             <motion.h1
-                className="uppercase font-semibold text-center max-w-[740px] mx-auto leading-[90px] text-[5.3rem] mb-8"
+                className="uppercase font-semibold text-center max-w-[740px] mx-auto leading-[90px] text-[5.3rem] mb-8 mt-8"
                 variants={itemVariants}
             >
                 {t('hero-heading')}
