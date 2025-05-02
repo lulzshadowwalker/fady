@@ -413,6 +413,53 @@
     .modal-backdrop > button {
         @apply w-full h-full opacity-0 cursor-pointer border-none p-0 m-0;
     }
+
+    /* base banner */
+    .banner {
+        @apply flex items-center gap-2 p-4 rounded-lg border;
+        font-size: 0.9375rem; /* 15px */
+        line-height: 1.25rem; /* 20px */
+    }
+
+    /* emoji before the text */
+    .banner::before {
+        content: var(--banner-icon);
+        font-size: 1.25rem; /* 20px */
+        line-height: 1;
+    }
+
+    /* INFO */
+    .banner-info {
+        --banner-icon: '🧞‍♂️';
+        border-color: var(--color-info);
+        /* lighten 80% toward white */
+        background-color: color-mix(in srgb, var(--color-info) 20%, white);
+        color: var(--color-info);
+    }
+
+    /* WARNING */
+    .banner-warning {
+        --banner-icon: '🌝';
+        border-color: var(--color-warning);
+        background-color: color-mix(in srgb, var(--color-warning) 20%, white);
+        color: var(--color-warning);
+    }
+
+    /* SUCCESS */
+    .banner-success {
+        --banner-icon: '🐸';
+        border-color: var(--color-success);
+        background-color: color-mix(in srgb, var(--color-success) 20%, white);
+        color: var(--color-success);
+    }
+
+    /* DANGER */
+    .banner-danger {
+        --banner-icon: '🤬';
+        border-color: var(--color-danger);
+        background-color: color-mix(in srgb, var(--color-danger) 20%, white);
+        color: var(--color-danger);
+    }
 }
 
 @layer utilities {

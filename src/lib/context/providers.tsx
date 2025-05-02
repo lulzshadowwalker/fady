@@ -7,6 +7,11 @@ import { TransitionRouter } from 'next-transition-router'
 import { gsap } from 'gsap'
 import Image from 'next/image'
 import logo from '@/assets/images/logo-white.png'
+import dynamic from 'next/dynamic'
+
+const EasterEggTrigger = dynamic(() => import('@/shared/easter-egg-trigger'), {
+    ssr: false,
+})
 
 export function Providers({ children }: { children: React.ReactNode }) {
     const firstLayer = useRef<HTMLDivElement | null>(null)
@@ -99,6 +104,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
                         className="fixed inset-0 z-50 translate-y-full bg-primary-content"
                     />
                 </TransitionRouter>
+                <EasterEggTrigger />
             </StatsProvider>
         </PostHogProvider>
     )
