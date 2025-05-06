@@ -16,7 +16,7 @@ export function Hero() {
     const locale = useLocale() as Locale
 
     return (
-        <section className="container mx-auto px-4 lg:px-0 mt-12 flex gap-4 justify-between relative overflow-hidden max-lg:overflow-x-hidden">
+        <section className="container mx-auto px-4 lg:px-0 mt-12 flex gap-4 justify-center relative overflow-hidden max-lg:overflow-x-hidden">
             <div className="px-12 max-lg:px-4">
                 <h1
                     className={cn(
